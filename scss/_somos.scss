@@ -1,25 +1,30 @@
 @use 'variables' as *;
 
 .quienes-somos {
-  background-color: $verde-bosque; // fondo principal de la sección
-
-  // Espaciado vertical coherente con Bootstrap
+  background-color: $verde-bosque;
   padding-top: 3rem;
   padding-bottom: 3rem;
-
-  // Ajuste para que el texto sea legible sobre fondos oscuros
   color: $beige-arena;
 
-  .card {
-    overflow: hidden;
+  h2 {
+    color: $beige-arena;
+    font-weight: 600;
+  }
+
+  p {
+    color: $beige-arena;
+  }
+
+  // Estilos del carrusel integrados con tu card anterior
+  .carousel {
     border-radius: 1rem;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff; // mantiene contraste sobre el verde
 
     img {
       object-fit: cover;
       width: 100%;
-      height: auto;
+      height: 100%;
       transition: transform 0.3s ease;
     }
 
@@ -31,14 +36,10 @@
         transform: scale(1.05);
       }
     }
-  }
 
-  h2 {
-    color: $beige-arena; // tono dorado que contrasta con el verde
-    font-weight: 600;
-  }
-
-  p {
-    color: $beige-arena; // texto en tono cálido claro
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%); // hace los íconos visibles sobre fondo oscuro
+    }
   }
 }

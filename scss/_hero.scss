@@ -43,26 +43,3 @@
     }
   }
 }
-
-.rutas {
-  .card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .card-img-top {
-      height: 220px; // ajustá según lo que se vea mejor (ej: 200–250px)
-      object-fit: cover;
-      object-position: center;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
-    }
-
-    .card-body {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
-}

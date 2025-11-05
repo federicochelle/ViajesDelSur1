@@ -1,16 +1,38 @@
 @use 'variables' as *;
 
-
 .rutas {
   background-color: $beige-arena;
+  padding: 3rem 0; // combina padding-top y bottom
+  // Si querés separar visualmente esta sección de las demás, este padding está bien
 
-  // Un poco de padding extra si querés separar visualmente:
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  // Opcional: si querés que las cards resalten sobre el fondo beige
+  // --- Tarjetas ---
   .card {
     background-color: white;
     border-radius: 0.75rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    // Imagen superior de la tarjeta
+    .card-img-top {
+      height: 220px; // ajustá según tus imágenes
+      object-fit: cover;
+      object-position: center;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    // Cuerpo de la tarjeta
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
