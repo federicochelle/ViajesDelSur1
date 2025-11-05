@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+.quienes-somos {
+  background-color: $verde-bosque; // fondo principal de la sección
+
+  // Espaciado vertical coherente con Bootstrap
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  // Ajuste para que el texto sea legible sobre fondos oscuros
+  color: $beige-arena;
+
+  .card {
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; // mantiene contraste sobre el verde
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  h2 {
+    color: $beige-arena; // tono dorado que contrasta con el verde
+    font-weight: 600;
+  }
+
+  p {
+    color: $beige-arena; // texto en tono cálido claro
+  }
+}

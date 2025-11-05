@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+
+.rutas {
+  background-color: $beige-arena;
+
+  // Un poco de padding extra si querés separar visualmente:
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  // Opcional: si querés que las cards resalten sobre el fondo beige
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+  }
+}

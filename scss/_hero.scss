@@ -1,0 +1,68 @@
+@use 'variables' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: {
+    image: url('../img/hero.jpg'); // cambiá la ruta según tu estructura
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+
+  // Capa oscura sobre el fondo
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  // Asegura que el contenido esté encima del overlay
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Botón opcional dentro del hero
+  .btn-explora {
+    background-color: #c18a13;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $terracota;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.rutas {
+  .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .card-img-top {
+      height: 220px; // ajustá según lo que se vea mejor (ej: 200–250px)
+      object-fit: cover;
+      object-position: center;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

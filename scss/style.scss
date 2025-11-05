@@ -1,0 +1,13 @@
+// Variables personalizadas
+@use 'variables' as *;
+
+// Bootstrap (usa tus variables)
+@use "../node_modules/bootstrap/scss/bootstrap" as *;
+
+// Tus módulos personalizados
+@use 'navbar' as *;
+@use 'hero' as *;
+@use 'cards' as *;
+@use 'somos' as *;
+@use 'contacto' as *;
+@use 'footer' as *;

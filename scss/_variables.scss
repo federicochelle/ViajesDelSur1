@@ -1,0 +1,23 @@
+// Paleta rústica / trekking
+$verde-bosque: #4A6B44 !default;
+$marron-tierra: #8B5E3C !default;
+$beige-arena: #e9e1d0 !default;
+$terracota: #C27149 !default;
+$azul-cielo: #7CAFD1 !default;
+$verde-musgo: #6B8E5B !default;
+$carbon-negro: #161816 !default;
+
+// Bootstrap overrides
+$primary: $verde-bosque !default;        // Para botones y navbar
+$secondary: $terracota !default;         // Botones alternativos
+$success: $verde-musgo !default;         // Indicaciones / alertas positivas
+$info: $azul-cielo !default;             // Hero o enlaces
+$danger: $marron-tierra !default;        // Alertas / errores
+$light: $beige-arena !default;           // Fondo general
+$dark: $marron-tierra !default;          // Texto oscuro / footer
+
+$body-bg: $beige-arena !default;
+$body-color: $marron-tierra !default;
+
+// Bordes y radios
+$border-radius: 0.5rem !default;
