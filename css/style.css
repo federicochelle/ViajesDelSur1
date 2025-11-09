@@ -11863,8 +11863,11 @@ textarea.form-control-lg {
   width: 100%; /* Asegura que ocupe todo el ancho */
   background-color: #e9e1d0;
   padding: 1rem 2rem;
-  z-index: 1050;
   font-family: "arial";
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important;
 }
 .custom-navbar .navbar-brand {
   display: flex;
@@ -11901,10 +11904,19 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   color: white;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform-origin: center;
+  animation: heroMove 15s ease-in-out infinite alternate;
+  z-index: 0;
 }
 .hero::before {
   content: "";
@@ -11930,6 +11942,17 @@ textarea.form-control-lg {
   transform: scale(1.05);
 }
 
+@keyframes heroMove {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.05) translateX(-10px);
+  }
+  100% {
+    transform: scale(1.1) translateX(10px);
+  }
+}
 .rutas {
   background-color: #e9e1d0;
   padding: 3rem 0;
@@ -12020,9 +12043,31 @@ textarea.form-control-lg {
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
 }
 .contacto .btn-explora:hover {
   background-color: rgb(63.2171428571, 91.4085714286, 58.0914285714);
+  transform: scale(1.05);
+}
+.contacto .mapa-container {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+.contacto .mapa-container:hover {
+  transform: scale(1.02);
+}
+.contacto .mapa-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+.contacto .direccion {
+  color: #8B5E3C;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .footer {

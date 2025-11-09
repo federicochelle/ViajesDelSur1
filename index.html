@@ -149,18 +149,12 @@
 
 
 
-<!-- Contacto section -->
 <section class="contacto py-5" id="contacto">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h2 class="fw-semibold text-center mb-4">Contacto</h2>
-        <p class="text-center text-muted mb-5">
-          ¿Tenés alguna consulta o querés planificar tu próxima aventura?  
-          Escribinos y te responderemos a la brevedad.
-        </p>
-
-        <!-- Formulario -->
+    <div class="row g-5 align-items-start">
+      <!-- Formulario -->
+      <div class="col-lg-6">
+        <h2 class="fw-semibold mb-4">Contacto</h2>
         <form>
           <div class="mb-3">
             <label for="email" class="form-label">Correo electrónico</label>
@@ -177,14 +171,32 @@
             <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
           </div>
 
-          <div class="text-center">
+          <div class="text-center text-lg-start">
             <button type="submit" class="btn btn-explora px-4">Enviar mensaje</button>
           </div>
         </form>
       </div>
+
+      <!-- Dirección + mapa -->
+      <div class="col-lg-6">
+        <h3 class="fw-semibold mb-3">Nuestra ubicación</h3>
+        <p class="direccion">Plaza Zitarrosa<br>Montevideo, Uruguay</p>
+
+        <div class="mapa-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.799608866972!2d-56.18977632537451!3d-34.911478072845426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81ced14b7c61%3A0x3c0479517d4a5fa9!2sPlaza%20Alfredo%20Zitarrosa!5e0!3m2!1ses!2suy!4v1762600224675!5m2!1ses!2suy" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 </main>
 
 <footer class="footer py-4">

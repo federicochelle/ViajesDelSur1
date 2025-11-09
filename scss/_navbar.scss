@@ -3,9 +3,12 @@
 .custom-navbar {
   width: 100%;        /* Asegura que ocupe todo el ancho */
   background-color: $beige-arena;
-  padding: 1rem 2rem;
-  z-index: 1050;  
+  padding: 1rem 2rem;  
   font-family: "arial";
+  position: -webkit-sticky;
+  position: sticky !important; // 👈 fuerza el comportamiento
+  top: 0 !important;
+  z-index: 1050 !important;
 
   .navbar-brand {
     display: flex;

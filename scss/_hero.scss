@@ -6,11 +6,22 @@
   display: flex;
   align-items: center;
   color: white;
-  background: {
-    image: url('../img/hero.jpg'); // cambiá la ruta según tu estructura
-    size: cover;
-    position: center;
-    repeat: no-repeat;
+  overflow: hidden; // importante para evitar bordes al moverse
+
+  // Fondo animado
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: {
+      image: url('../img/hero.jpg'); // ajustá la ruta
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    transform-origin: center;
+    animation: heroMove 15s ease-in-out infinite alternate;
+    z-index: 0;
   }
 
   // Capa oscura sobre el fondo
@@ -22,13 +33,13 @@
     z-index: 1;
   }
 
-  // Asegura que el contenido esté encima del overlay
+  // Contenido
   .container {
     position: relative;
     z-index: 2;
   }
 
-  // Botón opcional dentro del hero
+  // Botón
   .btn-explora {
     background-color: #c18a13;
     border: none;
@@ -41,5 +52,18 @@
       background-color: $terracota;
       transform: scale(1.05);
     }
+  }
+}
+
+// Animación suave del fondo
+@keyframes heroMove {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.05) translateX(-10px);
+  }
+  100% {
+    transform: scale(1.1) translateX(10px);
   }
 }
